@@ -1,7 +1,10 @@
-def login():
-    return "<h1>Faça seu log-in no sistema</h1>"
+from flask import Flask
 
-def test_login_page():
-    assert login() == "<h1>Faça seu log-in no sistema</h1>", "Deve ter retornar um html" 
+def create_app():
+    app = Flask(__name__)
 
-test_login_page()
+    with app.app_context():
+        from controllers.login import auth_bp
+        app.register_blueprint(auth_bp)
+
+    return app(venv)
