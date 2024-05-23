@@ -1,10 +1,6 @@
-from flask import Flask
+from app import create_app
 
-def create_app():
-    app = Flask(__name__)
+app = create_app()
 
-    with app.app_context():
-        from controllers.login import auth_bp
-        app.register_blueprint(auth_bp)
-
-    return app(venv)
+if __name__ == '__main__':
+    app.run(debug=True)
