@@ -26,6 +26,7 @@ exceptiongroup==1.2.1
 fasteners==0.14.1
 filelock==3.14.0
 Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
 fonttools==4.29.1
 fs==2.4.12
 future==0.18.2
@@ -103,9 +104,11 @@ SecretStorage==3.3.1
 Send2Trash==1.8.1b0
 six==1.16.0
 soupsieve==2.3.1
+SQLAlchemy==2.0.30
 sympy==1.9
 systemd-python==234
 tomli==2.0.1
+typing_extensions==4.11.0
 ubuntu-drivers-common==0.0.0
 ubuntu-pro-client==8001
 ufoLib2==0.13.1
