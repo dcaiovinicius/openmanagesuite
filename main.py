@@ -1,7 +1,6 @@
-def login():
-    return "<h1>Faça seu log-in no sistema</h1>"
+from app import create_app
 
-def test_login_page():
-    assert login() == "<h1>Faça seu log-in no sistema</h1>", "Deve ter retornar um html" 
+app = create_app()
 
-test_login_page()
+if __name__ == '__main__':
+    app.run(debug=True)
