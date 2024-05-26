@@ -6,14 +6,7 @@ login_controller = Blueprint('login_controller', __name__)
 
 @login_controller.route('/')
 def new():
-    return  """
-    <h1>Entre com seu log-in</h1>
-    <form method="POST" action="/login">
-      username: <input name="username"><br>
-      Password: <input name="password" type=password><br>
-      <button>Log In</button>
-    </form>
-    """
+    return  render_template("auth/login.html", title="Log-in")
 
 
 @login_controller.route('/login', methods=['POST'])
