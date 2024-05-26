@@ -1,4 +1,5 @@
-# MVP
+![Logo do Projeto](static/assets/logo.png)
+
 ### Plataforma Open Source e Self-Host para Gestão de Negócios | FCARP
 
 Uma plataforma open source e self-host definitiva para a gestão de negócios, projetada para oferecer controle total sobre suas operações. Com um foco inicial no gerenciamento de inventário e controle de estoque
