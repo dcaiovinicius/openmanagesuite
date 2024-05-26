@@ -26,4 +26,4 @@ def test_valid_user(client):
         'password': 'password'
     }, follow_redirects=True)
 
-    assert b'Stock' in response.data
+    assert b'Produtos' in response.data

@@ -21,4 +21,4 @@ def login():
             return "<p>Invalid username or password</p>"
         else:
             flask_login.login_user(user)
-            return redirect('stock')
+            return redirect('products')
