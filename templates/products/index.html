@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestão de Estoque</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }}">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__title">
+          <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo">
+        </div>
+        <nav class="header__nav">
+          <!--Admin-->
+            <a href="#" class="header__link">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              </svg>
+              Administrador
+            </a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="box">
+        <div class="box__header">
+          <h2 class="box__title">Produtos</h2>
+          <button class="box__add-button">Adicionar Produto</button>
+        </div>
+        <div class="box__controls">
+          <input
+            type="text"
+            class="box__search-input"
+            placeholder="Buscar produtos..."
+          />
+          <div class="box__filters">
+            <label class="box__filter">
+              <input type="radio" name="status" value="all" checked /> Todos
+            </label>
+            <label class="box__filter">
+              <input type="radio" name="status" value="active" /> Ativos
+            </label>
+            <label class="box__filter">
+              <input type="radio" name="status" value="inactive" /> Não Ativos
+            </label>
+          </div>
+        </div>
+
+        <!--Table-->
+        <table class="box__table">
+          <thead class="box__table-head">
+            <tr class="box__table-row">
+              <th class="box__table-header">ID</th>
+              <th class="box__table-header">Nome</th>
+              <th class="box__table-header">Descrição</th>
+              <th class="box__table-header">Preço</th>
+              <th class="box__table-header">Quantidade</th>
+              <th class="box__table-header">Status</th>
+              <th class="box__table-header">Ações</th>
+            </tr>
+          </thead>
+          <tbody class="box__table-body">
+            <tr class="box__table-row">
+              <td class="box__table-cell">1</td>
+              <td class="box__table-cell">Produto A</td>
+              <td class="box__table-cell">Descrição do Produto A</td>
+              <td class="box__table-cell">R$ 10,00</td>
+              <td class="box__table-cell">100</td>
+              <td class="box__table-cell">Ativo</td>
+              <td class="box__table-cell">
+                <button class="box__edit-button">Editar</button>
+                <button class="box__delete-button">Excluir</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <script src="{{ url_for('static', filename='javascript/main.js') }}"></script>
+    </div>
+  </body>
+</html>

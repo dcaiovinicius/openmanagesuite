@@ -21,8 +21,8 @@ def create_app():
         from controllers.login import login_controller
         app.register_blueprint(login_controller)
 
-        from controllers.stock import stock_controller
-        app.register_blueprint(stock_controller)
+        from controllers.products import products_controller
+        app.register_blueprint(products_controller)
 
         from models import user
         db.create_all()
