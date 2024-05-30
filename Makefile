@@ -12,7 +12,7 @@ init:
 	$(PIP) install python-dotenv
 
 run:
-	$(FLASK) --app main run
+	$(FLASK) --app main run --debug
 
 test:
 	$(PYTHON) -m pytest

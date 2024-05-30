@@ -24,7 +24,7 @@ def create_app():
         from controllers.products import products_controller
         app.register_blueprint(products_controller)
 
-        from models import user
+        from models import user, product
         db.create_all()
     return app
 
