@@ -19,14 +19,11 @@ Nosso objetivo é iniciar o desenvolvimento deste software com foco no gerenciam
 - Python 3
 - Makefile
 
-### Instalação das Dependências
+### Instalação das Dependências e ferramnetas para desenvolvimento
 
 ```bash
-# Instale o Makefile
-sudo apt update && sudo apt install make
-
-# O Ubuntu já vem com uma versão de Python 3 instalada, mas você precisa criar um alias de python3 para python
-echo alias python=python3 >> ~/.bashrc
+# Instale o Makefile e o git
+sudo apt update && sudo apt install make git
 
 # Clone o projeto
 git clone https://github.com/dcaiovinicius/openmanagesuite
@@ -36,19 +33,15 @@ cd openmanagesuite
 
 # Abra com seu editor de código favorito
 code .
-```
 
-```text
-# Você precisa criar um arquivo de configuração do projeto com o nome .env e definir o usuário e senha do MySQL
 
-Conteúdo do arquivo .env:
-
-FLASK_ENV=development
-SECRET_KEY=vGfEX7U1FxNXoPlKiNvH2JyudoPkQJHhu4Fs3Nf6UnA=
-DATABASE_URL=mysql+pymysql://root:password@localhost/mvp
+# Você precisa renomear um arquivo de configuração do projeto de .env-development para .env e definir o usuário e senha do MySQL.
 ```
 
 ```bash
+# instale as dependências
+make
+
 # Criar o usuário admin
 make seeds
 
