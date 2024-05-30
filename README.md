@@ -6,6 +6,9 @@ Uma plataforma open source e self-host definitiva para a gestão de negócios, p
 
 Nosso objetivo é iniciar o desenvolvimento deste software com foco no gerenciamento de inventário e controle de estoque.
 
+
+![Logo do Projeto](static/assets/screenshot.png)
+
 ## Tecnologias
 
 ### backend
