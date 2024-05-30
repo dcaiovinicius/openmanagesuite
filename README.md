@@ -9,18 +9,49 @@ Nosso objetivo é iniciar o desenvolvimento deste software com foco no gerenciam
 
 ![Logo do Projeto](static/assets/screenshot.png)
 
-## Tecnologias
 
-### backend
+# Instalação para Ambiente de Desenvolvimento
 
-- Python
-- Pytest
-- Flask
-- Mysql
+## Requisitos
 
+- Ubuntu
+- MySQL
+- Python 3
+- Makefile
 
-### frotend
+### Instalação das Dependências
 
-- CSS
-- HTML
-- Javascript
+```bash
+# Instale o Makefile
+sudo apt update && sudo apt install make
+
+# O Ubuntu já vem com uma versão de Python 3 instalada, mas você precisa criar um alias de python3 para python
+echo alias python=python3 >> ~/.bashrc
+
+# Clone o projeto
+git clone https://github.com/dcaiovinicius/openmanagesuite
+
+# Acesse a pasta do projeto
+cd openmanagesuite
+
+# Abra com seu editor de código favorito
+code .
+```
+
+```text
+# Você precisa criar um arquivo de configuração do projeto com o nome .env e definir o usuário e senha do MySQL
+
+Conteúdo do arquivo .env:
+
+FLASK_ENV=development
+SECRET_KEY=vGfEX7U1FxNXoPlKiNvH2JyudoPkQJHhu4Fs3Nf6UnA=
+DATABASE_URL=mysql+pymysql://root:password@localhost/mvp
+```
+
+```bash
+# Criar o usuário admin
+make seeds
+
+# Iniciar o servidor HTTP de desenvolvimento
+make run
+```
